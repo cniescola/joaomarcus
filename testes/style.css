@@ -4,19 +4,24 @@ main{
     height: 100vh;
     
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
 
-    justify-content:end;
+    justify-content:center;
     align-items: center;
-}
-div{
-    width: 75px;
-    height: 75px;
-    background-color: rgb(255, 255, 255);
-    border:1px solid black;
 }
 
 body{
     margin : 0;
     padding:0;
+}
+
+#ttt{
+    width: 100px;
+    height: 200px;
+    background-color:white;
+}
+
+
+body main #ttt{
+    background-color: red;
 }

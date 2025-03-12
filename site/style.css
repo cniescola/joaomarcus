@@ -22,16 +22,20 @@ flex-direction: row;
 padding:0px 65px ;
 }
 #d_branco{
-width: 100%;
+max-width: 100%;
 height: 108px;
 background-color: white;
+padding:0px 95px ;
+display: flex;
+flex-direction: row;
+
 }
 #esquerda{
     display:flex ;
     flex-direction: row;
     font-family:'Livvic', sans-serif;
     color: white;
-    
+    padding-left: 15px;
 }
 #configicons{
 display: flex;
@@ -45,6 +49,7 @@ width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: end;
+padding-right: 15px;
 }
 .inform{
     display:flex ;
@@ -92,4 +97,38 @@ cursor: pointer;
         margin-right:  35px; 
         
     }
-    
+    #esquerdaBranco{
+        width: 40%;
+        height: 100%;
+        
+    }
+    #direitaBranco{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    #logoHeader{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+    }
+    #logoHeader img{
+        width: 179px;
+        height: 37px;
+    }
+    .informBRANCO{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 38px
+        ;
+    }
+    .informBRANCO p{
+       font-size: 20px;
+       font-family: "Livvic", sans-serif;
+       font-weight: 500;
+    }

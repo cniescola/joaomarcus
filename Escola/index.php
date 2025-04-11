@@ -11,7 +11,7 @@
         <div id="opening">
             <div id="text">
               <h1>novo</h1>
-              <h3>educação</h3>
+              <h3>educação</h3> 
             </div>
 
         </div>

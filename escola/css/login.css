@@ -6,6 +6,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -15,6 +21,8 @@ body{
     background-color: #222;
 }
 
+
+
 .box{
     position: relative;
     width: 400px;
@@ -22,7 +30,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: repeating-conic-gradient(from var(--a),);
 }
 
 .box::before{
@@ -123,3 +131,10 @@ form h2{
     letter-spacing: 0.1em;
     font-size: 0.75em;
 }
+
+.group a:nth-child(2),
+.group a:hover{
+    color: #01dbc2;
+    filter:drop-shadow(0 0 5px #01dbc2);
+}
+

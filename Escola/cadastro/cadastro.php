@@ -41,11 +41,24 @@
             
     </div>
 
-    <?php   
+    <?php 
+    if( isset($_POST['nome']) && isset($_POST['tell']) && isset($_POST['email']) && isset($_POST['senha']) )
+     {
+
         $nome = $_POST['nome'];
         $telefone = $_POST['tell'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+
+        $con = mysqli_connect("localhost","root","","cadastro");
+
+        mysqli_query($con,"INSERT INTO cadastrados (id, nome, telefone, email, senha) VALUES (NULL, '$nome','$telefone','$email','$senha') ");
+            
+    
+    
+    }
+
+   
     ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>

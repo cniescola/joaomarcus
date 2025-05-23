@@ -29,7 +29,7 @@
             <input type="password" placeholder="Senha" name="senha">
             </div>
             <div class="inputbox">
-                <input type="submit" value="Entrar">
+                <input type="submit" value="Cadastrar">
             </div>
             
             <div class="group">
@@ -54,12 +54,20 @@
 
         mysqli_query($con,"INSERT INTO cadastrados (id, nome, telefone, email, senha) VALUES (NULL, '$nome','$telefone','$email','$senha') ");
             
-    
+        error_log("nome:$nome <br> telefone:$telefone");
     
     }
 
    
     ?>
+
+
+    <script>
+        var num1 =10;
+        var num2 =11;
+        var nome = "joao victor";
+        console.log("<?php echo $email ?> ");
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@
   <body>
     
     <div class="box">
-        <form action="cadastro.php" method="POST">
+        <form action="#" method="POST">
             <h2>CADASTRO</h2>
             <div class="inputbox">
                 <span></span>
@@ -29,7 +29,7 @@
             <input type="password" placeholder="Senha" name="senha">
             </div>
             <div class="inputbox">
-                <input type="submit" value="Cadastrar">
+                <input type="button" value="Cadastrar">
             </div>
             
             <div class="group">
@@ -66,41 +66,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
-       $(document).ready(function(){
-        var nome ="joao"; // %s
-        var telefone = 34999112441; // %d ou %i
-        var endereco = "rua alvim borges 76"; // %s
-        // var email = "joaoamrcus2309@gmail.com" ;
-        var idade = 17; 
-        // var pais = "Brasil";
-        // var Estado = "Minas gerais";
-        // var gênero = "masculino"
-
-        var valor1= 10;
-        var valor2 = 20;
-        var operador = "-";
-
-
-        function calculadora(valor1,valor2,operador){
-            var resultado;
-            if(operador=='+'){
-              resultado =  valor1 + valor2;
-            }else if(operador=='-'){
-                resultado = valor2-valor1;
-            }else if(operador=='/'){
-                resultado = valor2/valor1;
-            }else if(operador=='*'){
-                resultado = valor1*valor2;
+        var cont= 0;
+      $(".box form div:nth-child(6) input").click(function(){
+           
+            if(cont==0){
+                $("body").css("background-color","red");
+                cont=1;
+            }else if(cont==1){
+                $("body").css("background-color","blue");
+                cont=2;
+            }else if(cont==2){
+                $("body").css("background-color","yellow");
+                cont=0;
             }
-            
-            $(".inputbox").html(resultado);
-        }         
+        
 
-      calculadora(valor1,valor2,operador);
-       });
-
-       
-
+      });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>

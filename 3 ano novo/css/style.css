@@ -49,7 +49,9 @@ header > nav {
 header{
     position: fixed;
     width: 100%;
+    height: 125px;
     z-index: 1;
+    background-color: #d40c35;
 }
 
 header .nav_edit{
@@ -58,15 +60,39 @@ header .nav_edit{
 
 }
 
-.joao{
-    width: 100px;
-    height: 100px;
-    background-color: pink;
-    transition: 1s;
+#preloader {
+    background: white;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1s ease;
+  }
+  #logo {
+    position: fixed;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    transition: all 1s ease;
+    z-index: 10000;
+    opacity: 0;
+    text-decoration: none;
+  }
+  
 
-}
-.movimento{
-    width: 200px;
-    background-color: blue;
-
-}
+  #logo.active {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #logo.move-up {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(1.5);
+    color: white;
+    animation: pulse 2s infinite;
+    text-shadow: 2px 2px 4px #000000a6;
+  }

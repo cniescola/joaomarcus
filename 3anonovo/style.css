@@ -1,15 +1,17 @@
-*{
-    padding:0;
-    margin:0;
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {
+    padding: 0;
+    margin: 0;
 }
 
-header{
+header {
     width: 100%;
     height: 100px;
-    position: fixed ;
+    position: fixed;
 }
 
-#navigator{
+#navigator {
     width: 100%;
     height: 100%;
     display: flex;
@@ -18,110 +20,175 @@ header{
     transition: 0.5s ease-in-out;
 }
 
-.roll{
+.roll {
     filter: invert();
     background-color: #57e5d2 !important;
 }
 
-#navigator > div:nth-child(1),
-#navigator > div:nth-child(3){
+#navigator>div:nth-child(1),
+#navigator>div:nth-child(3) {
     width: 40%;
     height: 100%;
 }
 
-#navigator > div:nth-child(2){
+#navigator>div:nth-child(2) {
     width: 20%;
     height: 100%;
 }
 
-#navigator > div ul{
+#navigator>div ul {
     display: flex;
     flex-direction: row;
-    height:100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
 }
 
-#navigator > div ul li{
-    list-style:none;
-    margin-right:40px;
+#navigator>div ul li {
+    list-style: none;
+    margin-right: 40px;
 }
 
-#navigator > div ul li a{
+#navigator>div ul li a {
     text-decoration: none;
     font-family: sans-serif;
     font-weight: bold;
-    color:black;
+    color: black;
 }
 
-#navigator > div:nth-child(2) span{ 
+#navigator>div:nth-child(2) span {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#navigator > div:nth-child(2) span img{
+#navigator>div:nth-child(2) span img {
     height: 80%;
 }
 
 
-main{
+main {
     min-height: 200vh;
     width: 100%;
 }
 
-main #sec1{
+main #sec1 {
     width: 100%;
-    height:115vh;
+    height: 115vh;
 }
-main #sec2  {
+
+main #sec2 {
     width: 100%;
-    height:115vh;
+    min-height: 115vh;
     background-color: #a81a2d;
     position: relative;
     overflow-x: clip;
 }
 
-.division{
+.division {
     width: 190%;
     height: 50%;
     background-color: #a81a2d;
     animation: joaozim 5s infinite;
     position: absolute;
-    top:-130px;
+    top: -130px;
     left: -90px;
 }
 
-.division:nth-child(2){
+.division:nth-child(2) {
     animation-delay: 0.8s;
     background-color: #a81a2d;
     opacity: 0;
 }
-.division:nth-child(3){
+
+.division:nth-child(3) {
     animation-delay: 1.8s;
     background-color: #a81a2d;
     opacity: 0;
 }
 
-@keyframes joaozim{
-    0%{
-        border-radius: 38% 62% 98% 2% / 17% 36% 64% 83% ;
-       
+@keyframes joaozim {
+    0% {
+        border-radius: 38% 62% 98% 2% / 17% 36% 64% 83%;
+
     }
-    30%{
-        border-radius: 16% 84% 98% 2% / 43% 55% 45% 57%  ;
+
+    30% {
+        border-radius: 16% 84% 98% 2% / 43% 55% 45% 57%;
         opacity: 1;
     }
-    60%{
-        border-radius:21% 79% 98% 2% / 24% 28% 72% 76% ;   
+
+    60% {
+        border-radius: 21% 79% 98% 2% / 24% 28% 72% 76%;
     }
-    100%{
-        border-radius: 38% 62% 98% 2% / 17% 36% 64% 83% ;
+
+    100% {
+        border-radius: 38% 62% 98% 2% / 17% 36% 64% 83%;
     }
 }
 
-.blob{
+.blob {
     width: 500px;
     height: 500px;
+}
+
+.section-information {
+    width: 100%;
+    height: 150vh;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #a81a2d;
+}
+
+.section-information .titulo {
+    font-family: "Livvic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+}
+
+.section-information .subtitu {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 70px;
+}
+
+.section-information .informaciones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-information .informaciones .infs{
+    width: 420px;
+    height: 240px;
+    background-color:white;
+    border-radius:28px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infs .titulo{
+  font-family: "Livvic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color:black;
+}
+
+.infs .texto{
+    text-align: center;
+    width: 250px;
 }
